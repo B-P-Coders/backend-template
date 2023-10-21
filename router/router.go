@@ -34,7 +34,8 @@ func Setup(db *gorm.DB) *fiber.App {
 	api := controllers.Controller{Db: db}
 
 	// Routing
-	_ = api
+	// Connect routes here
+	_ = api // Remove later
 
 	return a
 }

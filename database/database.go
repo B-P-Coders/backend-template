@@ -14,7 +14,7 @@ func Setup() (*gorm.DB, error) {
 		config.Conf.DbConfig.Host,
 		config.Conf.DbConfig.User,
 		config.Conf.DbConfig.Password,
-		"kujonhouse",
+		"db_name",
 		"5432",
 	)
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
