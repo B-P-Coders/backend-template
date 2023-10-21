@@ -22,7 +22,10 @@ func Setup() (*gorm.DB, error) {
 		return nil, err
 	}
 
-	db.AutoMigrate()
+	db.AutoMigrate(
+	// Put your models here like this
+	// &models.MySampleModel{}
+	)
 
 	return db, nil
 }
