@@ -23,7 +23,7 @@ func Setup(db *gorm.DB) *fiber.App {
 	}))
 	a.Use(cors.New(cors.Config{
 		AllowOrigins: config.Conf.SrvConfig.AllowOrigins,
-		AllowMethods: "GET, OPTIONS",
+		AllowMethods: "GET, POST, OPTIONS",
 		AllowHeaders: "Origin, Host, Content-Type, Accept",
 	}))
 	a.Get("/monitor", monitor.New(monitor.Config{
