@@ -8,6 +8,8 @@ services:
       - ${SERVER_PORT}:${SERVER_PORT}
     env_file:
       - .env
+    depends_on:
+      - database
     networks:
       - backend
 
@@ -20,6 +22,8 @@ services:
       POSTGRES_DB: db_name
     ports:
       - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
     networks:
       - backend
 
