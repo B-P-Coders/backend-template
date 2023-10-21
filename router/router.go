@@ -27,7 +27,7 @@ func Setup(db *gorm.DB) *fiber.App {
 		AllowHeaders: "Origin, Host, Content-Type, Accept",
 	}))
 	a.Get("/monitor", monitor.New(monitor.Config{
-		Title: "6obcy people monitor stats",
+		Title: "Backend monitor stats",
 	}))
 
 	// Controller

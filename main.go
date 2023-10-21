@@ -14,9 +14,9 @@ func main() {
 
 	db, err := database.Setup()
 	if err != nil {
-		fmt.Println(fmt.Errorf("Error setting up database: %s", err.Error()))
+		fmt.Println(fmt.Errorf("error setting up database: %s", err.Error()))
 		os.Exit(2)
 	}
 	r := router.Setup(db)
-	r.Listen(fmt.Sprintf(":%d", config.Conf.SrvConfig.Port))
+	r.Listen(fmt.Sprintf("127.0.0.1:%d", config.Conf.SrvConfig.Port))
 }
