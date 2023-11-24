@@ -9,12 +9,12 @@ type DatabaseConfig struct {
 	Password string `env:"PASSWORD"`
 }
 
-type ServerCofnig struct {
+type ServerConfig struct {
 	Port         uint16 `env:"PORT"`
 	AllowOrigins string `env:"ALLOW_ORIGINS"`
 }
 
 type Config struct {
 	DbConfig  DatabaseConfig `envPrefix:"DB_"`
-	SrvConfig ServerCofnig   `envPrefix:"SERVER_"`
+	SrvConfig ServerConfig   `envPrefix:"SERVER_"`
 }
